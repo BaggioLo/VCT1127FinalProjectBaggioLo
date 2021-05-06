@@ -166,12 +166,13 @@ nav .fly {
 }
 
 .showcase .info {
-  -ms-grid-column: 4;
+  -ms-grid-column: 2;
   -ms-grid-column-span: 1;
-  grid-column: 4/5;
-  -ms-grid-row: 3;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
   -ms-grid-row-span: 1;
-  grid-row: 3/4;
+  grid-row: 2/3;
+  padding-top: 5%;
 }
 
 .showcase .info h3 {
