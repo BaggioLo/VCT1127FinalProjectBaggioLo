@@ -147,7 +147,7 @@ nav{
 /***** Features Card Section *****/
 
 .features-container{
-    background: #323232;
+    background: #fff;
     position: relative;
     z-index: 0;
     overflow: hidden;
@@ -168,10 +168,12 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    h2{
+        color: black;
+    }
     .cards {
         display: flex;
         justify-content: space-between;
-        color: black;
         .card{
             background: white;
             margin: 0px 30px;
@@ -180,6 +182,28 @@ nav{
             text-align: center;
             border-radius: 20px;
             overflow: hidden;
+            h2{
+                color: black;
+            }
+            .icons{
+                width: 80%;
+                padding: 25px;
+            }
+            #planet{
+                margin-left: 12.5%;
+            }
+            #customers{
+                margin-left: 20.5%;
+                height: 60%;
+                margin-top: 15%;
+            }
+            #bookmark{
+                width: 60%;
+                height: 40%;
+                margin-top: 15%;
+                margin-left: 20.5%;
+                margin-bottom: 20%;
+            }
             h4{
                 margin: 30px 0px 10px 0px;
             }
@@ -193,6 +217,98 @@ nav{
         }
     }
     
+}
+
+/***** SVG Icons Stroke Dashoffset *****/
+
+.card .icons path{
+    fill: transparent;
+    stroke-width: 1.8;
+    stroke: var(--red);
+}
+
+.card #planet path{
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 0;
+}
+
+.card #planet:hover path{
+    animation: stroke-animate 4s ease-in;
+}
+
+@keyframes stroke-animate{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1800;
+    }
+    80%{
+        fill:transparent;
+        transform:scale(1.1);
+    }
+    90%{
+        transform:scale(1);
+    }
+    100%{
+        fill: var(--red);
+    }
+}
+
+.card #customers path{
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 0;
+}
+
+.card #customers:hover path{
+    animation: stroke-animate 4s ease-in;
+}
+
+@keyframes stroke-animate{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1800;
+    }
+    80%{
+        fill:transparent;
+        transform:scale(1.1);
+    }
+    90%{
+        transform:scale(1);
+    }
+    100%{
+        fill: var(--red);
+    }
+}
+
+.card #bookmark path{
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 0;
+}
+
+.card #bookmark:hover path{
+    animation: stroke-animate 4s ease-in;
+}
+
+@keyframes stroke-animate{
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1800;
+    }
+    80%{
+        fill:transparent;
+        transform:scale(1.1);
+    }
+    90%{
+        transform:scale(1);
+    }
+    100%{
+        fill: var(--red);
+    }
 }
 
 /***** Soon Section *****/

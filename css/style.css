@@ -180,7 +180,7 @@ nav .fly {
 
 /***** Features Card Section *****/
 .features-container {
-  background: #323232;
+  background: #fff;
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -209,6 +209,10 @@ nav .fly {
       justify-content: space-around;
 }
 
+.features h2 {
+  color: black;
+}
+
 .features .cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,7 +220,6 @@ nav .fly {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: black;
 }
 
 .features .cards .card {
@@ -234,6 +237,33 @@ nav .fly {
   overflow: hidden;
 }
 
+.features .cards .card h2 {
+  color: black;
+}
+
+.features .cards .card .icons {
+  width: 80%;
+  padding: 25px;
+}
+
+.features .cards .card #planet {
+  margin-left: 12.5%;
+}
+
+.features .cards .card #customers {
+  margin-left: 20.5%;
+  height: 60%;
+  margin-top: 15%;
+}
+
+.features .cards .card #bookmark {
+  width: 60%;
+  height: 40%;
+  margin-top: 15%;
+  margin-left: 20.5%;
+  margin-bottom: 20%;
+}
+
 .features .cards .card h4 {
   margin: 30px 0px 10px 0px;
 }
@@ -246,6 +276,127 @@ nav .fly {
 .features .cards .card img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/***** SVG Icons Stroke Dashoffset *****/
+.card .icons path {
+  fill: transparent;
+  stroke-width: 1.8;
+  stroke: var(--red);
+}
+
+.card #planet path {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 0;
+}
+
+.card #planet:hover path {
+  -webkit-animation: stroke-animate 4s ease-in;
+          animation: stroke-animate 4s ease-in;
+}
+
+@-webkit-keyframes stroke-animate {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1800;
+  }
+  80% {
+    fill: transparent;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    fill: var(--red);
+  }
+}
+
+@keyframes stroke-animate {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1800;
+  }
+  80% {
+    fill: transparent;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    fill: var(--red);
+  }
+}
+
+.card #customers path {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 0;
+}
+
+.card #customers:hover path {
+  -webkit-animation: stroke-animate 4s ease-in;
+          animation: stroke-animate 4s ease-in;
+}
+
+@keyframes stroke-animate {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1800;
+  }
+  80% {
+    fill: transparent;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    fill: var(--red);
+  }
+}
+
+.card #bookmark path {
+  stroke-dasharray: 1800;
+  stroke-dashoffset: 0;
+}
+
+.card #bookmark:hover path {
+  -webkit-animation: stroke-animate 4s ease-in;
+          animation: stroke-animate 4s ease-in;
+}
+
+@keyframes stroke-animate {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1800;
+  }
+  80% {
+    fill: transparent;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    fill: var(--red);
+  }
 }
 
 /***** Soon Section *****/
