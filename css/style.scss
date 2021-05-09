@@ -8,6 +8,7 @@
 
 :root{
     --red: #f54538;
+    --gradient: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(121,9,86,1) 35%, rgba(245,69,56,1) 100%);
 }
 
 /***** Global Styling Flexbox rule for body *****/
@@ -64,7 +65,7 @@ a {
 /* Styling for Banner and Nav bar*/
 
 .banner{
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(121,9,86,1) 35%, rgba(245,69,56,1) 100%);
+    background: var(--gradient);
 }
 
 .nav-container {
@@ -98,7 +99,7 @@ nav{
             left: 50px;
             width: 60px;
             height: 60px;
-            background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(121,9,86,1) 35%, rgba(245,69,56,1) 100%);
+            background: var(--gradient);
             border-radius: 50%;
             transform: translate(-10%, -20%);
             mix-blend-mode: screen;
@@ -106,7 +107,7 @@ nav{
     }
 
     .fly{
-        background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(121,9,86,1) 35%, rgba(245,69,56,1) 100%);
+        background: var(--gradient);
         padding: 10px 40px;
         border-radius: 20px;
     }
@@ -192,6 +193,7 @@ nav{
             }
             #planet{
                 margin-left: 12.5%;
+                height: 60%;
             }
             #customers{
                 margin-left: 20.5%;
