@@ -70,3 +70,32 @@ tl.from(".card", {
     duration: 1
 });
 
+/* Parallax Section */
+
+gsap.to(".pContent", {
+    yPercent: -100,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".parallax",
+      scrub: true
+    }, 
+  });
+  
+  gsap.to(".pImage", {
+    yPercent: 50,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".parallax",
+      scrub: true
+    }, 
+  });
+
+
+
+
+
+
+
+
+
+
