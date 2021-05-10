@@ -176,6 +176,12 @@ nav{
     z-index: 0;
     overflow: hidden;
 
+    .spaceshipscroll{
+        width: 100px;
+        height: 100px;
+        transform: rotate(90deg);
+    }
+
     .wave{
         position: absolute;
         left: 0;

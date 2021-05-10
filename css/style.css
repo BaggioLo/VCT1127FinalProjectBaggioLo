@@ -209,6 +209,13 @@ nav .fly {
   overflow: hidden;
 }
 
+.features-container .spaceshipscroll {
+  width: 100px;
+  height: 100px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 .features-container .wave {
   position: absolute;
   left: 0;
