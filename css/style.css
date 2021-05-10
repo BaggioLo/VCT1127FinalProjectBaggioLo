@@ -101,7 +101,7 @@ nav ul {
       -ms-flex: 1;
           flex: 1;
   list-style: none;
-  padding-right: 50px;
+  margin-right: 50px;
 }
 
 nav #logo {
@@ -278,7 +278,7 @@ nav .fly {
 
 .features .cards .card #planet {
   margin-left: 12.5%;
-  height: 60%;
+  height: 65%;
 }
 
 .features .cards .card #customers {
@@ -520,7 +520,9 @@ footer h1 {
     -ms-grid-column-span: 1;
     grid-column: 2/3;
     -ms-grid-row: 2;
-    grid-row: 2/2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    margin-top: 10%;
   }
   .showcase h2,
   .showcase .info {
