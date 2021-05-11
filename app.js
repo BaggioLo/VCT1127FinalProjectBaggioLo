@@ -120,17 +120,24 @@ gsap.to(".pContent", {
     }, 
   });
 
-// Canvas with Animate
+/* Canvas with Animate
+For this section I added canvas with animate to try
+and simulate a planet bouncing from corner to corner.
+The title of this section is "The First Space Travel Company"
+I made a circle bouncing with canvas to add on
+to the circle imagery of planets and stars; and I also tried to 
+make it look like it was bouncing off the h2 header "The First Space Travel Company"
+*/
 
 const canvas = document.getElementById("canvasplanets");
-const c = canvas.getContext("2d");
+const c = canvas.getContext("2d"); //allows me to draw on canvas
 
-canvas.width = 400;
-canvas.height = 400;
+canvas.width = 600;
+canvas.height = 200;
 
 
-let x = 200;
-let y = 200; 
+let x = 80;
+let y = 60; 
 let dx = Math.random() - 0.5; // velocity for horizontal axis 'x', adding this so the circle goes left and right. Math.random allows me to generate a random number for the velocity on the x axis
 let dy = 3; // velocity for vertical axis 'y', adding this so the circle goes up and down
 let radius = 30; //adding the radius of the circle to bounce off edge or else it will bounce from the center
