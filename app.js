@@ -120,80 +120,45 @@ gsap.to(".pContent", {
     }, 
   });
 
-  // Canvas with Animate
+// Canvas with Animate
 
-const canvas = document.getElementById('canvasplanets');
+const canvas = document.getElementById("canvasplanets");
+const c = canvas.getContext("2d");
+
 canvas.width = 400;
 canvas.height = 400;
 
-const ctx = canvas.getContext('2d');
 
-function Circle (x, y, r, c) {
-  this.x = x;
-  this.y = y;
-  this.r = r;
-  this.c = c;
+let x = 200;
+let y = 200; 
+let dx = Math.random() - 0.5; // velocity for horizontal axis 'x', adding this so the circle goes left and right. Math.random allows me to generate a random number for the velocity on the x axis
+let dy = 3; // velocity for vertical axis 'y', adding this so the circle goes up and down
+let radius = 30; //adding the radius of the circle to bounce off edge or else it will bounce from the center
 
-// This .dx and this .dy are the velocity for the balls when they are going through the screen
+function animate() {
+  requestAnimationFrame(animate);
+  // this is going to allow me to clearing the canvas during the animation
+  c.clearRect(0, 0, innerWidth, innerHeight)
 
-  this.dx = (Math.random() * 4) + 1;
-  this.dx *= Math.floor(Math.random * 2) == 1 ? 1 : -1;
-  this.dy = (Math.random() * 4) + 1;
-  this.dy *= Math.floor(Math.random * 2) == 1 ? 1 : -1;
+  c.beginPath();
+  c.arc(x, y, radius, 0, Math.PI * 2, false);
+  c.strokeStyle = '#f54538';
+  c.lineWidth = 10;
+  c.stroke();
 
-  this.draw = function () {
-    ctx.beginPath();
-    ctx.fillStyle = this.c;
-    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    ctx.fill();
+  // if the circle hits left of the screen reverse the action, if the circle hits the right then reverse
+  if (x + radius > canvas.width || x - radius < 0) {
+    dx = -dx;
   }
 
-  this.animate = function () {
-    this.x += this.dx;
-    this.y += this.dy;
-
-    this.draw();
+  // if the circle hits the top of the screen the reverse the action, if circle hits bottom of the screen reverse
+  if (y + radius > canvas.height || y - radius < 0) {
+    dy = -dy;
   }
+
+  x += dx; //this is the velocity going from left to right
+  y += dy;
 }
 
-// Using math.random so that it doesn't generate balls outside of the intended area
-
-const balls = [];
-for (let i = 0; i < 10; i++){
-  let r = Math.floor(Math.random() * 30) + 15;
-  let x = Math.random() * (canvas.width - r * 2) + r;
-  let y = Math.random() * (canvas.height - r * 2) + r;
-  let c = '#f54538';
-  balls.push(new Circle(x, y, r, c));
-}
-
-// looping through the balls array to draw multiple balls
-
-function Update () {
-  for (let i = 0; i < balls.length; i++) {
-    balls[i].animate();
-  }
-}
-
-requestAnimationFrame(Update);
-
-Update();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+animate();
 

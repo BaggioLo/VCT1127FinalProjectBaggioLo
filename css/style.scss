@@ -386,6 +386,7 @@ fills to the var red color and then goes back down
         }
         p{
             color: #525252;
+            font-size: 2rem;
         }
       }
     }
@@ -410,12 +411,13 @@ fills to the var red color and then goes back down
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 30vh;
+        min-height: 10vh;
+        padding-top: 5%;
         z-index: 2;
     }
     canvas{
-        z-index: 0;
-        margin-left: 25%;
+        margin-bottom: 5%;
+        margin-left: 35%;
     }
 }
 

@@ -479,6 +479,7 @@ fills to the var red color and then goes back down
 
 .parallax .pContent p {
   color: #525252;
+  font-size: 2rem;
 }
 
 .pImage {
@@ -508,13 +509,14 @@ fills to the var red color and then goes back down
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 30vh;
+  min-height: 10vh;
+  padding-top: 5%;
   z-index: 2;
 }
 
 .gray canvas {
-  z-index: 0;
-  margin-left: 25%;
+  margin-bottom: 5%;
+  margin-left: 35%;
 }
 
 /***** Footer Section *****/
